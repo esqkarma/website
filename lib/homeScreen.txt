@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+import 'package:website/projects.dart';
+import 'package:animated_background/animated_background.dart';
+
+// main class calling to
+// the MyAnimatedBackground.
+void main() {
+  runApp(HomeScreen());
+}
+
+// MyAnimatedBackground class is stateful class.
+class HomeScreen extends StatefulWidget {
+  HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
+// definition of ParticlesOptions.
+  ParticleOptions particles = const ParticleOptions(
+    baseColor: Colors.cyan,
+    spawnOpacity: 0.0,
+    opacityChangeRate: 0.25,
+    minOpacity: 0.1,
+    maxOpacity: 0.4,
+    particleCount: 70,
+    spawnMaxRadius: 15.0,
+    spawnMaxSpeed: 500.0,
+    spawnMinSpeed: 30,
+    spawnMinRadius: 7.0,
+  );
+  @override
+  Widget build(BuildContext context) {
+    // return MaterialApp
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+
+        body: Container(
+
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            border: Border.all(width: 2,color: Colors.grey)
+                        ),
+                        child:  Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(20),
+                              child: Align(
+                                alignment: Alignment.topLeft,
+                                child: Column(
+                                  children: [
+                                    Text("VIPIN KARMA",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,fontStyle: FontStyle.italic),),
+                                    Text("flutter developer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                    SizedBox(height:MediaQuery.of(context).size.height/20,),
+                                    TextButton(onPressed: (){
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Project()));
+                                    },child: Text("   + projects",style: TextStyle(color: Colors.black87),)),
+                                    TextButton(onPressed: (){}, child: Text("   + contact",style: TextStyle(color: Colors.black87),)),
+                                    TextButton(onPressed: (){}, child: Text("+ info",style: TextStyle(color: Colors.black87))),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Column(
+                              children: [
+
+                              ],
+                            )
+
+                          ],
+                        ),
+                      ),
+      ),
+    );
+  }
+}
