@@ -14,7 +14,8 @@ class AboutMe extends StatelessWidget {
     String about = "Hello! I'm a budding Flutter enthusiast based in the beautiful state of Kerala. As a programming enthusiast, I embark on the exciting journey of creating mobile applications with Flutter. Eager to explore the vast realm of software development, I am driven by curiosity and a passion for crafting innovative solutions. Inspired by the vibrant tech community, I aim to contribute to the ever-evolving world of programming. Excited about the endless possibilities in Flutter, I am on a quest to enhance my skills and create impactful applications. Let's code and create together! 🚀📱";
     return Scaffold(
       backgroundColor: Colors.white,
-      body:ListView(
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -29,19 +30,22 @@ class AboutMe extends StatelessWidget {
                   child: SizedBox(
                     height: height*0.44,width: width*0.95,
 
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Texts(data: "About Me",fontFamily: 'ArchivoBlack',),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Texts(data: "About Me",fontFamily: 'ArchivoBlack',),
 
-                          ],
-                        ),
-                        Divider(),
-                        Texts(data: about,),
-                        Skills(),
+                            ],
+                          ),
+                          Divider(),
+                          Texts(data: about,),
+                          Skills(),
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -50,9 +54,6 @@ class AboutMe extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: height*0.5,width: width,color: Colors.black,
-              child: Expanded(child: Lottie.asset('assets/Animation - 1708763305854.json',fit: BoxFit.fill)))
         ],
       ),
     );
