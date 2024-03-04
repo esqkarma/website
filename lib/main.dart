@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:website/Screens/About%20Me/aboutMe.dart';
 
-import 'HomeScreen.dart';
+import 'Screens/Home/Home.dart';
 
 void main() {
-
   runApp(const MyApp());
 }
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-    home: HomeScreen());
+        debugShowCheckedModeBanner: false,
+        home: Home());
   }
-  }
+}
