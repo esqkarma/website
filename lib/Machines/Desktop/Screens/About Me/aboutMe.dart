@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:website/Screens/About%20Me/Skills.dart';
-import 'package:website/Util/Container.dart';
 import 'package:website/Util/Text.dart';
+
+import 'Skills.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({super.key});

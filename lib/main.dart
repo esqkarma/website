@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:website/Screens/About%20Me/aboutMe.dart';
+import 'package:website/expal.dart';
+import 'Machines/Mobile/MobileScreen.dart';
+import 'Machines/Responsive.dart';
+import 'Machines/Desktop/desktop.dart';
 
-import 'Screens/Home/Home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +14,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home());
+        home:Responsive(mobileScreen: MobileScreen(), desktop: Desktop() ));
+      //home: Screen(),);
   }
 }

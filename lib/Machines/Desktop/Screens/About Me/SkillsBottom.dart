@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../Util/Container.dart';
-import '../../Util/Text.dart';
+import '../../../../Util/Container.dart';
+import '../../../../Util/Text.dart';
 
 class SkillBottom extends StatelessWidget {
   int? n;

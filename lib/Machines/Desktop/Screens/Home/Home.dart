@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:website/Screens/Home/HomeBody.dart';
-import 'package:website/Screens/Home/HomeBottom.dart';
-import 'package:website/Screens/Home/HomeTop.dart';
+
+import 'HomeBody.dart';
+import 'HomeBottom.dart';
+import 'HomeTop.dart';
+
 
 class Home extends StatelessWidget {
   const Home({super.key});

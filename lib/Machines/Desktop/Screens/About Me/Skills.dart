@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/Screens/About%20Me/SkillsBottom.dart';
-import 'package:website/Util/Container.dart';
 import 'package:website/Util/Text.dart';
+import 'SkillsBottom.dart';
 class Skills extends StatelessWidget {
   const Skills({super.key});
 

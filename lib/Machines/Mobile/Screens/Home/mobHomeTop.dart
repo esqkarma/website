@@ -1,22 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:website/Screens/About%20Me/aboutMe.dart';
-import 'package:website/Util/Container.dart';
-import 'package:website/Util/Text.dart';
 
-class HomeTop extends StatefulWidget {
-  const HomeTop({super.key});
+import '../../../../Util/Text.dart';
+import '../../../Desktop/Screens/About Me/aboutMe.dart';
 
-  @override
-  State<HomeTop> createState() => _HomeTopState();
-}
+class MobHomeTop extends StatelessWidget {
+  const MobHomeTop({super.key});
 
-class _HomeTopState extends State<HomeTop> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-
     return Column(
       children: [
         SizedBox(
@@ -30,8 +23,8 @@ class _HomeTopState extends State<HomeTop> {
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 10),
                       child: SizedBox(
-                          height: 25,
-                          width: 25,
+                          height: 20,
+                          width: 20,
                           child: Image.asset(
                             'assets/dog-paw-print.png',
                             fit: BoxFit.fill,
@@ -39,7 +32,7 @@ class _HomeTopState extends State<HomeTop> {
                     ),
                     Texts(
                       data: "App Developer",
-                      size: 20,
+                      size: 16,
                       fontweight: FontWeight.bold,
                       color: Colors.black26,
                     ),
@@ -54,7 +47,7 @@ class _HomeTopState extends State<HomeTop> {
                       },
                       child: Texts(
                         data: "about me",
-                        size: 17,
+                        size: 12,
                         color: Colors.black,
                       ),
                     ),
@@ -62,7 +55,7 @@ class _HomeTopState extends State<HomeTop> {
                       onPressed: () {},
                       child: Texts(
                         data: "projects",
-                        size: 17,
+                        size: 12,
                         color: Colors.black,
                       ),
                     ),
@@ -70,7 +63,7 @@ class _HomeTopState extends State<HomeTop> {
                       onPressed: () {},
                       child: Texts(
                         data: "contact",
-                        size: 17,
+                        size: 12,
                         color: Colors.black,
                       ),
                     ),
@@ -85,6 +78,6 @@ class _HomeTopState extends State<HomeTop> {
           ),
         )
       ],
-    );
+    ); ;
   }
 }
