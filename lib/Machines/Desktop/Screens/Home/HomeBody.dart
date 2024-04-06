@@ -8,7 +8,7 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String me = "I'm Vipin karma,a mobile app developer";
+    String me = "I'm Vipin karma, a mobile app developer";
     String about =
         '"Passionate Flutter developer with a knack for building delightful mobile experiences. Transforming ideas into reality through clean and expressive code"';
     double width = MediaQuery.of(context).size.width;
